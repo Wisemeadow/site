@@ -13,12 +13,19 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #9ba7a3;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .logo-container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
         .logo {
-            max-width: 1000px;
             width: 100%;
             height: auto;
             margin-bottom: 20px;
@@ -32,10 +39,17 @@
         .email:hover {
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            .logo-container {
+                padding: 0 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="images/logo.png" alt="Wise Meadow Logo" class="logo">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Wise Meadow Logo" class="logo">
+    </div>
     <a href="mailto:info@wisemeadow.com" class="email">info@wisemeadow.com</a>
 </body>
 </html>
