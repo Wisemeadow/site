@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise Meadow</title>
+    <title>Wise Meadow — Software for life at home</title>
+    <meta name="description" content="Wise Meadow builds thoughtful software for life at home, including Penny, a home-design companion for households.">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/logo.png">
     <style>
+        :root {
+            --sage: #9ba7a3;
+            --ink: #2f3634;
+            --muted: #5f6b67;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #9ba7a3;
+            background-color: var(--sage);
             padding: 20px;
             box-sizing: border-box;
+            color: white;
         }
         .logo-container {
             width: 100%;
@@ -28,21 +34,55 @@
         .logo {
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
+        .tagline {
+            font-family: 'Noto Serif', serif;
+            font-size: 20px;
+            text-align: center;
+            margin: 0 0 32px;
+        }
+        .card {
+            width: 100%;
+            max-width: 640px;
+            background: #fdfdfc;
+            color: var(--ink);
+            border-radius: 10px;
+            padding: 28px 28px 24px;
+            box-sizing: border-box;
+            margin-bottom: 28px;
+        }
+        .card h2 {
+            font-family: 'Noto Serif', serif;
+            font-size: 22px;
+            margin: 0 0 10px;
+        }
+        .card p {
+            font-size: 15.5px;
+            line-height: 1.6;
+            margin: 0 0 10px;
+            color: var(--ink);
+        }
+        .card .fineprint {
+            font-size: 13.5px;
+            color: var(--muted);
+            margin-top: 14px;
+        }
+        .card a { color: #4a6a5f; }
         .email {
             font-family: 'Noto Serif', serif;
             font-size: 18px;
             color: white;
             text-decoration: none;
         }
-        .email:hover {
-            text-decoration: underline;
+        .email:hover { text-decoration: underline; }
+        .copyright {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 10px;
         }
         @media (max-width: 768px) {
-            .logo-container {
-                padding: 0 10px;
-            }
+            .logo-container { padding: 0 10px; }
         }
     </style>
 </head>
@@ -50,6 +90,39 @@
     <div class="logo-container">
         <img src="images/logo.png" alt="Wise Meadow Logo" class="logo">
     </div>
+    <p class="tagline">Thoughtful software for life at home.</p>
+
+    <section class="card">
+        <h2>Penny</h2>
+        <p>
+            Penny is our home-design companion for households: collect
+            inspiration on freeform mood boards, plan each room with photos
+            and dimensions, keep budgets honest, and manage project to-dos —
+            with optional connections to the tools you already use, like
+            Asana and Pinterest.
+        </p>
+        <p>
+            Penny is currently in private use with our founding households,
+            with more on the way.
+        </p>
+        <p class="fineprint">
+            <a href="/penny/privacy/">Penny privacy policy</a>
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>About Wise Meadow</h2>
+        <p>
+            Wise Meadow is a small software studio building calm, useful
+            tools for the place you live. wisemeadow.com and the apps on it
+            are owned and operated by Wise Meadow.
+        </p>
+        <p class="fineprint">
+            Contact: <a href="mailto:info@wisemeadow.com">info@wisemeadow.com</a>
+        </p>
+    </section>
+
     <a href="mailto:info@wisemeadow.com" class="email">info@wisemeadow.com</a>
+    <p class="copyright">© 2026 Wise Meadow. All rights reserved.</p>
 </body>
 </html>
